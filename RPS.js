@@ -48,7 +48,7 @@ function playGame() {
         console.log(playRound(playerSelection, computerSelection));
         while_counter += 1;
     }
-    if(win_counter > 2){
+    if(winCounter > 2){
         console.log("You've won! Your Score: " + winCounter);
     }
     else{
