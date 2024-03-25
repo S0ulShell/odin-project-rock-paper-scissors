@@ -48,7 +48,13 @@ function playGame() {
         console.log(playRound(playerSelection, computerSelection));
         while_counter += 1;
     }
-    console.log("Game Over. Your Score: " + winCounter);
+    if(win_counter > 2){
+        console.log("You've won! Your Score: " + winCounter);
+    }
+    else{
+        console.log("You've Lost :( Your Score: " + winCounter)
+    }
+    
 }
 let winCounter = 0;
 let playerSelection;
