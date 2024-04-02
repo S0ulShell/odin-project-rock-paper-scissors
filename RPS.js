@@ -20,27 +20,25 @@ function getComputerChoice() {
 }
 
 function playRound(playerSelection, computerSelection) {
-
+    
     if (playerSelection === computerSelection) {
         return ("Its a tie! " + playerSelection + " and " + computerSelection + " are equal...");
-    }
-
-    else if ((playerSelection === "rock" && computerSelection === "scissors" || (playerSelection === "paper" && computerSelection === "rock") || (playerSelection === "scissors" && computerSelection === "paper"))) {
+    }else if ((playerSelection === "rock" && computerSelection === "scissors" || (playerSelection === "paper" && computerSelection === "rock") || (playerSelection === "scissors" && computerSelection === "paper"))) {
         winCounter += 1;
         return ("You win! " + playerSelection + " beats " + computerSelection + "!");
-    }
-
-    else {
+    }else {
         return ("You lose! " + playerSelection + " loses to " + computerSelection + "!");
     }
 }
 
 function getPlayerSelection() {
+
     playerSelection = prompt("Rock Paper or Scissors?")
     return(playerSelection);
 }
 
 function playGame() {
+
     let while_counter = 0;
     while(while_counter < 5){
         computerSelection = getComputerChoice();
@@ -56,8 +54,8 @@ function playGame() {
     }
     
 }
+
 let winCounter = 0;
 let playerSelection;
 let computerSelection = getComputerChoice();
 playGame();
-
