@@ -30,7 +30,7 @@ function getComputerChoice() {
 function playRound(playerSelection, computerSelection) {
 
     if (playerSelection === computerSelection) {
-        return ("Its a tie! " + playerSelection + " and " + computerSelection + " are equal...");
+        
     } else if ((playerSelection === "rock" && computerSelection === "scissors" || (playerSelection === "paper" && computerSelection === "rock") || (playerSelection === "scissors" && computerSelection === "paper"))) {
         winCounter += 1;
         document.getElementById('winCounter').innerHTML = winCounter;
@@ -52,8 +52,13 @@ function playGame(playerSelection) {
     computerSelection = getComputerChoice();
 
     console.log(playRound(playerSelection, computerSelection));
-    if (winCounter < 5 || lossCounter < 5){ 
-        document.getElementById("message").innerHTML = "";
+    if (winCounter < 5 || lossCounter < 5){
+        if(playerSelection == computerSelection){
+            document.getElementById("message").innerHTML = "Its a tie! " + playerSelection + " and " + computerSelection + " are equal... Try again";
+        }else{
+            document.getElementById("message").innerHTML = "";
+        }
+        
     }
 
     if (winCounter == 5 || lossCounter == 5) {
